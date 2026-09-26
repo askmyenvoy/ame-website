@@ -1,10 +1,15 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 
 type Milestone = {
   period: string;
   isoDate: string;
   title: string;
   paragraphs: string[];
+  readMore?: {
+    href: string;
+    label: string;
+  };
 };
 
 const milestones: Milestone[] = [
@@ -62,6 +67,19 @@ const milestones: Milestone[] = [
       'At the same time, the website, onboarding and product experience were aligned around Ask My Envoy as the public product, creating the foundation for a broader commercial push.',
     ],
   },
+  {
+    period: 'September 2026',
+    isoDate: '2026-09',
+    title: 'Opening Ask My Envoy to the agent ecosystem',
+    paragraphs: [
+      'Ask My Envoy took a first step toward interoperability with other AI agents. A production remote MCP server was published in the official MCP Registry, and work on A2A support continued as part of the broader agent-to-agent architecture.',
+      'The objective is to make meeting coordination available beyond the Ask My Envoy interface, so generalist AI agents can eventually work with specialized meeting-coordination agents instead of rebuilding that logic themselves.',
+    ],
+    readMore: {
+      href: '/developer',
+      label: 'Read more about meeting coordination for the agentic web →',
+    },
+  },
 ];
 
 export const metadata: Metadata = {
@@ -118,6 +136,16 @@ export default function MilestonesPage() {
                         {paragraph}
                       </p>
                     ))}
+                    {milestone.readMore ? (
+                      <p>
+                        <Link
+                          href={milestone.readMore.href}
+                          className="text-action-primary hover:underline"
+                        >
+                          {milestone.readMore.label}
+                        </Link>
+                      </p>
+                    ) : null}
                   </div>
                 </div>
               </article>

@@ -161,13 +161,25 @@ export default function Home() {
                 Instead of giving people a predefined way to book time with you, you ask your Envoy
                 to coordinate the meeting for you.
               </p>
+              <p>
+                Ask My Envoy is also being built for the agentic web, so generalist AI agents can
+                work with an Envoy when they need to coordinate a meeting through open protocols such
+                as MCP and A2A.
+              </p>
             </div>
 
-            <p className="border-l-2 border-line-default pl-4 text-left w-full max-w-3xl">
-              <Link href="/meeting-coordination" className="text-action-primary hover:underline">
-                What meeting coordination actually means →
-              </Link>
-            </p>
+            <div className="w-full max-w-3xl stack-sm">
+              <p className="border-l-2 border-line-default pl-4 text-left">
+                <Link href="/meeting-coordination" className="text-action-primary hover:underline">
+                  What meeting coordination actually means →
+                </Link>
+              </p>
+              <p className="border-l-2 border-line-default pl-4 text-left">
+                <Link href="/developer" className="text-action-primary hover:underline">
+                  Read about meeting coordination for the agentic web →
+                </Link>
+              </p>
+            </div>
           </div>
         </div>
       </section>
