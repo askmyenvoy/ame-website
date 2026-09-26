@@ -1,6 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { referenceArticleSitemapEntries } from '@/lib/reference-article';
 import { referenceArticle as bookingLinksAndMeetingCoordinationArticle } from './booking-links-and-meeting-coordination/reference-article.config';
+import { referenceArticle as developerArticle } from './developer/reference-article.config';
 import { referenceArticle as costOfMeetingCoordinationArticle } from './cost-of-meeting-coordination/reference-article.config';
 import { referenceArticle as meetingCoordinationArticle } from './meeting-coordination/reference-article.config';
 import { referenceArticle as coordinationReunionsArticle } from './fr/coordination-reunions/reference-article.config';
@@ -12,6 +13,7 @@ const referenceArticlePages = referenceArticleSitemapEntries([
   meetingCoordinationArticle,
   costOfMeetingCoordinationArticle,
   bookingLinksAndMeetingCoordinationArticle,
+  developerArticle,
   coordinationReunionsArticle,
   coutCoordinationReunionsArticle,
 ]);

@@ -6,6 +6,7 @@ components:
 
 notes: |
   Release Notes 0.2.17
+    - Added explanation page `/developer` covering MCP discovery, A2A communication, Envoy identity discovery, and cross-organization scheduling, with route-level SEO metadata
 
   Release Notes 0.2.16
     - Added `/.well-known/mcp-registry-auth` for MCP Registry HTTP domain verification (content from `MCP_REGISTRY_AUTH_RECORD`)

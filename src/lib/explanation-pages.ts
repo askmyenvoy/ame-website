@@ -27,6 +27,12 @@ export const explanationPages = {
       url: `${BASE_URL}/booking-links-and-meeting-coordination`,
     },
   },
+  developer: {
+    en: {
+      path: '/developer',
+      url: `${BASE_URL}/developer`,
+    },
+  },
 } as const;
 
 export type BilingualExplanationPageKey = 'meetingCoordination' | 'costOfMeetingCoordination';
@@ -37,6 +43,7 @@ export const explanationPagePaths = [
   explanationPages.costOfMeetingCoordination.en.path,
   explanationPages.costOfMeetingCoordination.fr.path,
   explanationPages.bookingLinksAndMeetingCoordination.en.path,
+  explanationPages.developer.en.path,
 ] as const;
 
 export function buildExplanationPageAlternates(
