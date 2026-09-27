@@ -1,6 +1,7 @@
 import ExplanationPageHero from '../components/ExplanationPageHero';
 import { buildReferenceArticleMetadata, ReferenceArticleJsonLd } from '@/lib/reference-article';
 import { referenceArticle } from './reference-article.config';
+import Link from 'next/link';
 
 export const metadata = buildReferenceArticleMetadata(referenceArticle);
 
@@ -21,6 +22,9 @@ export default function DeveloperPage() {
               Meeting coordination for the agentic web
             </h1>
             <p className="italic text-copy-muted">{referenceArticle.description}</p>
+            <h2 className="explanation-article-heading explanation-article-heading--first">
+              Why general-purpose AI agents need vertical agents
+            </h2>
 
             <p>
               AI agents are becoming capable of handling increasingly broad tasks: researching
@@ -28,7 +32,7 @@ export default function DeveloperPage() {
               actions on behalf of users. But the agentic web will not be built by one general-purpose
               AI agent reproducing every workflow in every domain.
             </p>
-            <p>
+            <p className="pt-4">
               Some problems require domain-specific logic, persistent rules, specialized
               integrations, and their own trust model. In those cases, a generalist AI agent needs to
               collaborate with a specialized agent, sometimes called a vertical AI agent: an agent
@@ -36,45 +40,57 @@ export default function DeveloperPage() {
               broadly.
             </p>
             <p>
-              Meeting coordination is one of those domains. Ask My Envoy is building Envoys,
+              <Link href="/meeting-coordination" className="text-action-primary hover:underline">
+                Meeting coordination
+              </Link>{' '}
+              is one of those domains. Ask My Envoy is building Envoys,
               specialized AI agents for meeting coordination. An Envoy is designed to represent a
               person&apos;s scheduling preferences, calendars, availability, trust rules, and
               coordination constraints, and to work with other people or agents to reach a meeting
               outcome.
             </p>
             <p>
-              Our premise is simple: when a generalist AI agent needs to arrange a meeting, it should
-              not have to recreate meeting coordination from scratch. It should be able to work with
-              an Envoy that already understands how that person&apos;s time can be coordinated.
+              Our conviction is that meeting coordination is not a simple scheduling task. It combines
+              several layers that are deeply embedded in human relationships: trust, identity,
+              permissions, availability, preferences, organizational boundaries, social conventions,
+              and the protocols people use to negotiate time with one another.
+            </p>
+            <p>
+              These layers are intertwined, context-dependent, and difficult to reproduce reliably
+              inside a general-purpose agent. A generalist agent should understand the user&apos;s
+              intent, recognize when specialized expertise is required, and delegate the coordination
+              problem to an agent built for that domain.
+            </p>
+            <p>For meeting coordination, we call that specialized agent an Envoy.</p>
+
+            <h2 className="explanation-article-heading">What does an Envoy do?</h2>
+            <p>An Envoy coordinates meetings on a person&apos;s behalf.</p>
+            <p>
+              It sits between that person&apos;s calendars, scheduling preferences, trust rules, and
+              the outside world. Its role is not simply to expose free time or create calendar events,
+              but to manage the coordination process while respecting the boundaries that person has
+              defined.
+            </p>
+            <p>
+              An Envoy can work with a human, a general-purpose AI assistant, or another agent. It can
+              participate in a multi-turn coordination process where requirements change, several people
+              need to agree, and different levels of trust apply to different participants.
+            </p>
+            <p>
+              That makes an Envoy different from a booking link, a calendar API, or a generic
+              scheduling tool. Those tools expose functions. An Envoy owns the{' '}
+              <Link
+                href="/booking-links-and-meeting-coordination"
+                className="text-action-primary hover:underline"
+              >
+                meeting-coordination workflow
+              </Link>
+              .
             </p>
 
-            <h2 className="explanation-article-heading explanation-article-heading--first">
-              Why general-purpose agents need specialized agents
+            <h2 className="explanation-article-heading">
+              Trust is part of meeting coordination
             </h2>
-            <p>
-              A general-purpose AI agent can understand intent very well. It can understand a request
-              such as &ldquo;schedule a meeting with Paul next week,&rdquo; identify that a calendar
-              is involved, and potentially call an API that creates an event.
-            </p>
-            <p>That does not mean it understands meeting coordination.</p>
-            <p>
-              Creating a calendar event is a relatively simple software operation. A system needs a
-              date, a start time, a duration, some participants, and access to a calendar. The
-              difficult part usually happens before the event can be created.
-            </p>
-            <p>
-              The system has to determine which participants matter, which calendars are
-              authoritative, what availability can be disclosed, what scheduling preferences apply,
-              which time zones are involved, whether several people need to be consulted, and what
-              happens when the first proposed time does not work.
-            </p>
-            <p>
-              Across organizations, that problem becomes more complex because the agent is no longer
-              operating inside a single trusted environment. It may be interacting with people it does
-              not know, calendars it cannot directly access, and other agents acting on behalf of
-              different users.
-            </p>
-            <p>That creates a trust problem as much as a scheduling problem.</p>
             <p>
               An AI agent that can access someone&apos;s calendar is touching one of that
               person&apos;s most sensitive operational resources: their time. It may be able to infer
@@ -108,42 +124,27 @@ export default function DeveloperPage() {
               whose behalf, and under what level of trust.
             </p>
             <p>
-              This is why Ask My Envoy treats trust as part of meeting coordination rather than as a
-              separate security feature. A scheduling agent that simply reads and writes calendar
-              events is not enough. A meeting coordination agent needs to understand participants,
-              relationships, permissions, and boundaries across organizations.
-            </p>
-            <p>That is the role of an Envoy.</p>
-            <p>
-              An Envoy is a vertical AI agent specialized in meeting coordination. It represents a
-              person&apos;s scheduling preferences, calendars, availability, and trust rules, and uses
-              that context to coordinate with other people and agents while revealing no more
-              information than necessary.
-            </p>
-
-            <h2 className="explanation-article-heading">What is an Envoy?</h2>
-            <p>An Envoy is a specialized AI agent for meeting coordination.</p>
-            <p>
-              It sits between a person&apos;s calendars, scheduling preferences, trust rules, and the
-              outside world. Its role is not simply to expose free time or create calendar events. Its
-              role is to coordinate a meeting on that person&apos;s behalf while respecting the
-              boundaries that person has defined.
+              Trust is therefore not a feature layered on top of meeting coordination. It is the
+              foundation that determines whether coordination should happen at all, what information
+              can be exchanged, and which actions an agent is allowed to take.
             </p>
             <p>
-              An Envoy can work with a human, a general-purpose AI assistant, or another specialized
-              agent. It can participate in a multi-turn coordination process where the requirements
-              change, several people need to agree, and different levels of trust apply to different
-              participants.
+              Before an Envoy can propose a time, expose availability, or create a meeting, it has to
+              establish the boundaries of the relationship it is operating within. The same request
+              may be treated differently depending on whether it comes from a colleague, a client, a
+              trusted partner, an unknown person, or another agent acting on someone else&apos;s behalf.
             </p>
             <p>
-              That makes an Envoy different from a booking link, a calendar API, or a generic
-              scheduling tool. Those tools expose functions. An Envoy represents a coordination
-              capability.
+              This matters even more on the agentic web. As more interactions are initiated by
+              software agents rather than directly by people, the system cannot assume that access to
+              a calendar implies permission to coordinate someone&apos;s time. Identity, representation,
+              authorization, and trust have to come first.
             </p>
             <p>
-              This is the model we are building toward for the agentic web: generalist agents handle
-              the broad user relationship, while specialized or vertical agents handle
-              domain-specific work. For meeting coordination, the specialized agent is an Envoy.
+              That is why Ask My Envoy treats trust as a core part of the coordination model. An
+              Envoy is not simply a scheduling agent with access to a calendar. It is a vertical AI
+              agent responsible for coordinating time within the trust boundaries defined by the
+              people involved.
             </p>
 
             <h2 className="explanation-article-heading">
@@ -174,54 +175,49 @@ export default function DeveloperPage() {
             </p>
             <p>
               Ask My Envoy also supports A2A, the Agent2Agent protocol, for communication between
-              agents. MCP and A2A solve different parts of the interoperability problem: MCP exposes
-              capabilities to AI hosts and agents, while A2A provides a protocol for agents to
-              communicate with other agents.
+              agents. MCP and A2A solve different interoperability problems: MCP exposes capabilities
+              to AI hosts and agents, while A2A provides a standard way for one agent to communicate
+              with another.
             </p>
             <p>
               That distinction matters for meeting coordination because the interaction is not always
               a single tool call. A request can evolve as participants, timing, constraints, and trust
               relationships change. In those cases, a generalist AI agent needs more than access to a
-              calendar function; it needs a way to work with a specialized meeting-coordination agent.
-            </p>
-            <p>
-              Ask My Envoy is building that agent layer around the Envoy: a vertical AI agent
-              specialized in meeting coordination, designed to work with humans, generalist agents,
-              and other agents across organizational boundaries.
+              calendar function; it needs a way to delegate the coordination process to an Envoy.
             </p>
 
-            <h2 className="explanation-article-heading">The coordination logic stays with the Envoy</h2>
-            <p>The protocols are only the external interface. The difficult part remains the coordination engine behind them.</p>
+            <h2 className="explanation-article-heading">Why delegation matters</h2>
             <p>
-              An Envoy still has to deal with participant resolution, Google Calendar and Microsoft
-              Calendar access, scheduling logic, time zones, trust and permissions,
-              cross-organization boundaries, and the operational details required to turn a request
-              into a confirmed meeting.
+              A general-purpose AI agent can reasonably act inside the environment of the user who has
+              authorized it. It may read that user&apos;s calendar, suggest times, create events, or
+              reorganize commitments within the permissions it has been given.
             </p>
             <p>
-              That is why we do not see agent interoperability as a replacement for the scheduling
-              system. It is the way other agents gain access to it.
+              Cross-organization meeting coordination is different. The moment an agent needs to
+              negotiate access to another person&apos;s time, it is no longer operating only on behalf
+              of its own user. It is entering a relationship governed by another person&apos;s
+              preferences, permissions, trust rules, and right to control their own calendar.
+            </p>
+            <p>That creates an important scope boundary.</p>
+            <p>
+              A generalist agent should be able to express its user&apos;s intent: &ldquo;I want to
+              meet Paul next week.&rdquo; It should not automatically acquire the right to inspect
+              Paul&apos;s availability, decide what Paul is willing to disclose, or make commitments on
+              Paul&apos;s behalf.
+            </p>
+            <p>Those decisions belong on Paul&apos;s side of the relationship.</p>
+            <p>
+              This is where delegation becomes more than a technical pattern. It preserves the
+              separation between the agent representing the requester and the agent responsible for
+              protecting the other person&apos;s time.
             </p>
             <p>
-              The objective is to let an external AI agent delegate meeting coordination without
-              needing to understand how Ask My Envoy handles calendars, trust, scheduling constraints,
-              or organizational boundaries internally.
+              On the agentic web, that boundary matters. Without it, a sufficiently capable generalist
+              agent risks becoming an all-purpose intermediary with authority extending far beyond the
+              user who chose it. Meeting coordination needs a model in which each person retains
+              control over the agent that represents their time, while agents collaborate across that
+              boundary.
             </p>
-
-            <h2 className="explanation-article-heading">Why this matters</h2>
-            <p>
-              Much of the current agent ecosystem is still organized around tools. An agent
-              discovers a tool, sends it structured input, and receives a result. That works well
-              for many operations, but meeting coordination is often not a single call. It can
-              require context, clarification, negotiation, and several turns before the task is
-              complete.
-            </p>
-            <p>
-              That is one reason we believe specialized agents will matter. Some workflows are
-              better represented as a capability owned by another agent than as a collection of
-              low-level tools.
-            </p>
-            <p>Meeting coordination is one of those workflows.</p>
 
             <h2 className="explanation-article-heading">What is live today</h2>
             <p>
@@ -236,20 +232,28 @@ export default function DeveloperPage() {
               than rebuild meeting coordination itself.
             </p>
 
-            <h2 className="explanation-article-heading">Building for an agent-to-agent web</h2>
+            <h2 className="explanation-article-heading">Building for the agentic web</h2>
             <p>
-              The web moved from documents to applications, then from applications to APIs. AI agents
-              add another layer, where software does not just expose functions but increasingly
-              exposes capabilities that other agents can discover and use.
+              As AI agents become interfaces to more of the software people use, the next challenge is
+              not only what an agent can do. It is how agents acting on behalf of different people can
+              work together without collapsing the boundaries, permissions, and trust relationships
+              between those people.
             </p>
             <p>
-              Ask My Envoy is being built for that environment. The role of the Envoy is not to
-              become another generic assistant, but to become the specialized agent that other agents
-              can rely on when the task is meeting coordination.
+              Meeting coordination makes that problem particularly visible because time is shared but
+              control over it is individual. A general-purpose agent can represent the intent of the
+              person who chose it, but coordinating with someone else requires respecting the rules and
+              authority on the other side of the relationship.
             </p>
             <p>
-              That is the technical direction behind our work with MCP, A2A, agent discovery, Agent
-              Cards, and cross-organization scheduling.
+              Ask My Envoy is being built for that model. An Envoy is the vertical AI agent
+              responsible for meeting coordination on behalf of the person it represents, while MCP and
+              A2A provide open ways for other agents to discover and interact with that capability.
+            </p>
+            <p>
+              Our objective is not to make every AI agent capable of controlling every calendar. It is
+              to make it possible for agents to collaborate across organizational boundaries while each
+              person retains control over their own time.
             </p>
           </article>
         </div>
