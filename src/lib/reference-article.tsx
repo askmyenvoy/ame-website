@@ -3,13 +3,13 @@ import {
   buildExplanationPageAlternates,
   type BilingualExplanationPageKey,
 } from '@/lib/explanation-pages';
+import {
+  ORGANIZATION_ID,
+  ORGANIZATION_NAME,
+  SITE_URL,
+} from '@/lib/site-entity';
 
-const SITE_URL = 'https://askmyenvoy.com';
 const DEFAULT_OG_IMAGE = '/og-card.png';
-const PUBLISHER_NAME = 'Ask My Envoy';
-const PUBLISHER_LOGO_URL = `${SITE_URL}/og-card.png`;
-const ORGANIZATION_URL = `${SITE_URL}/about`;
-const ORGANIZATION_ID = `${ORGANIZATION_URL}#organization`;
 
 export type ReferenceArticleLanguage = 'en' | 'fr';
 
@@ -45,7 +45,7 @@ export function buildReferenceArticleMetadata(
   config: ReferenceArticleConfig,
 ): Metadata {
   const imagePath = config.image ?? DEFAULT_OG_IMAGE;
-  const imageAlt = config.imageAlt ?? `${PUBLISHER_NAME} - ${config.metaTitle}`;
+  const imageAlt = config.imageAlt ?? `${ORGANIZATION_NAME} - ${config.metaTitle}`;
   const ogLocale = openGraphLocale(config.language);
 
   const alternates = config.hreflang
@@ -95,22 +95,8 @@ export function buildReferenceArticleJsonLd(config: ReferenceArticleConfig) {
     datePublished: config.datePublished,
     dateModified: config.dateModified,
     inLanguage: schemaLanguage(config.language),
-    author: {
-      '@type': 'Organization',
-      '@id': ORGANIZATION_ID,
-      name: PUBLISHER_NAME,
-      url: ORGANIZATION_URL,
-    },
-    publisher: {
-      '@type': 'Organization',
-      '@id': ORGANIZATION_ID,
-      name: PUBLISHER_NAME,
-      url: ORGANIZATION_URL,
-      logo: {
-        '@type': 'ImageObject',
-        url: PUBLISHER_LOGO_URL,
-      },
-    },
+    author: { '@id': ORGANIZATION_ID },
+    publisher: { '@id': ORGANIZATION_ID },
     mainEntityOfPage: {
       '@type': 'WebPage',
       '@id': config.canonical,
