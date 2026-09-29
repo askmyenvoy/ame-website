@@ -5,6 +5,7 @@ import { headers } from 'next/headers';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import ClsProbe from './components/ClsProbe';
+import SiteJsonLd from './components/SiteJsonLd';
 import { getWebsiteVersionLabel } from '@/lib/system-version';
 
 const inter = Inter({ subsets: ["latin"] });
@@ -60,6 +61,7 @@ export default async function RootLayout({
   return (
     <html className="scroll-smooth" lang={lang}>
       <body className={inter.className}>
+        <SiteJsonLd />
         <ClsProbe />
         <Header />
         <main>
