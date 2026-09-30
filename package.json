@@ -2,6 +2,12 @@
   "name": "ame-website",
   "version": "0.1.0",
   "private": true,
+  "license": "UNLICENSED",
+  "author": "Ask My Envoy",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/askmyenvoy/ame-website.git"
+  },
   "scripts": {
     "dev": "next dev -p 3001",
     "build": "next build",
