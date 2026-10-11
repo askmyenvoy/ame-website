@@ -21,6 +21,7 @@ export const ORGANIZATION_LOGO_URL = `${SITE_URL}/logo/AME_logo_512x512.png`;
  */
 export const ORGANIZATION_SAME_AS: string[] = [
   'https://www.linkedin.com/company/askmyenvoy/',
+  'https://github.com/askmyenvoy',
 ];
 
 export function buildSiteEntityJsonLd(): Record<string, unknown> {
