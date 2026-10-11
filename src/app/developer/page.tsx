@@ -174,6 +174,16 @@ export default function DeveloperPage() {
               infrastructure.
             </p>
             <p>
+              You can also find Ask My Envoy&apos;s public development resources on{' '}
+              <a
+                href="https://github.com/askmyenvoy"
+                className="text-ink-primary underline underline-offset-2"
+              >
+                GitHub
+              </a>
+              .
+            </p>
+            <p>
               Ask My Envoy also supports A2A, the Agent2Agent protocol, for communication between
               agents. MCP and A2A solve different interoperability problems: MCP exposes capabilities
               to AI hosts and agents, while A2A provides a standard way for one agent to communicate
