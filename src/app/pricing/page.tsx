@@ -22,11 +22,11 @@ export default function PricingPage() {
         <div className="container-4xl">
           <div className="flow-md items-center">
             <h1 className="hero-heading text-center text-ink-primary">
-              Two ways to use Ask My Envoy
+              Three ways to use Ask My Envoy
             </h1>
 
             <p className="text-lead text-center text-copy-muted max-w-3xl">
-              Connect your calendar for free, or get your own Envoy to coordinate meetings for you.
+              Connect your calendar for free, or get your own Envoy and pay per completion or through a monthly subscription.
             </p>
           </div>
         </div>
@@ -35,23 +35,22 @@ export default function PricingPage() {
       {/* Pricing Cards */}
       <section className="section-loose bg-surface-soft">
         <div className="container-7xl">
-          <div className="grid-two items-stretch">
+          <div className="grid-three items-stretch pt-3">
             <div className="bg-surface-base rounded-2xl p-8 md:p-10 flex flex-col h-full border border-line-default shadow-sm">
               <h2 className="section-subheading text-ink-primary mb-6">
-                Let Envoys coordinate with me
+                Share my calendar
               </h2>
-
-              <p className="text-body text-copy-muted mb-6">
-                Connect your calendar so other people&apos;s Envoys can coordinate with you.
-                Control who can coordinate with you through your Trust Center.
-              </p>
 
               <div className="mb-2">
                 <span className="text-5xl font-semibold text-emphasis-primary">Free</span>
               </div>
 
+              <p className="text-body text-copy-muted mb-6">
+                Let others coordinate meetings with you.
+              </p>
+
               <p className="text-body text-copy-primary mb-8">
-                No subscription. No Envoy required.
+                Connect your calendar so other people&apos;s Envoys can coordinate meetings with you.
               </p>
 
               <h3 className="text-sm font-semibold text-ink-primary mb-4 uppercase tracking-wide">
@@ -61,19 +60,9 @@ export default function PricingPage() {
               <ul className="stack-xs">
                 <li className="row-start-tight">
                   <CheckIcon className="w-5 h-5 text-ink-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-body text-copy-primary">Connect Google Calendar or Microsoft Outlook</span>
-                </li>
-                <li className="row-start-tight">
-                  <CheckIcon className="w-5 h-5 text-ink-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-body text-copy-primary">Let approved Envoys take your availability into account</span>
-                </li>
-                <li className="row-start-tight">
-                  <CheckIcon className="w-5 h-5 text-ink-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-body text-copy-primary">Control who can coordinate with you through your Trust Center</span>
-                </li>
-                <li className="row-start-tight">
-                  <CheckIcon className="w-5 h-5 text-ink-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-body text-copy-primary">Revoke access whenever you want</span>
+                  <span className="text-body text-copy-primary">
+                    Control who can access your calendar availability through your Trust Center.
+                  </span>
                 </li>
               </ul>
 
@@ -84,22 +73,35 @@ export default function PricingPage() {
               </div>
             </div>
 
-            <div className="bg-surface-base rounded-2xl p-8 md:p-10 flex flex-col h-full border border-line-default shadow-sm">
+            <div className="relative flex flex-col h-full">
+              <p
+                className="absolute -top-3 left-1/2 z-10 -translate-x-1/2 whitespace-nowrap rounded-full bg-emphasis-primary px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-copy-inverse shadow-sm"
+                aria-hidden="true"
+              >
+                Web Summit promo
+              </p>
+
+              <div className="bg-surface-base rounded-2xl p-8 md:p-10 flex flex-col h-full flex-1 border-2 border-emphasis-primary shadow-md">
               <h2 className="section-subheading text-ink-primary mb-6">
-                Your Envoy
+                Pay per booking
               </h2>
 
               <div className="mb-2">
-                <div className="row-inline-xs">
-                  <span className="text-5xl font-semibold text-emphasis-primary">30-day</span>
-                  <span className="text-3xl text-copy-primary">free trial</span>
-                </div>
+                <span className="text-4xl md:text-5xl font-semibold text-emphasis-primary leading-tight">
+                  €0.30 / booking
+                </span>
               </div>
 
-              <p className="text-lg text-copy-muted mb-6">€29 / seat / month after your trial</p>
+              <p className="text-body text-copy-muted mb-4">
+                First 5 bookings free. No subscription.
+              </p>
+
+              <p className="text-sm text-copy-primary mb-6">
+                Sign up by December 31, 2026, and keep this price permanently. €0.50/booking thereafter for new customers.
+              </p>
 
               <p className="text-body text-copy-primary mb-8">
-                No credit card required. Cancel anytime.
+                Get your own Envoy to coordinate meetings on your behalf. Pay only for completed bookings.
               </p>
 
               <h3 className="text-sm font-semibold text-ink-primary mb-4 uppercase tracking-wide">
@@ -109,15 +111,7 @@ export default function PricingPage() {
               <ul className="stack-xs">
                 <li className="row-start-tight">
                   <CheckIcon className="w-5 h-5 text-ink-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-body text-copy-primary">Schedule meetings</span>
-                </li>
-                <li className="row-start-tight">
-                  <CheckIcon className="w-5 h-5 text-ink-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-body text-copy-primary">Reschedule meetings</span>
-                </li>
-                <li className="row-start-tight">
-                  <CheckIcon className="w-5 h-5 text-ink-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-body text-copy-primary">Cancel meetings</span>
+                  <span className="text-body text-copy-primary">Schedule, reschedule and cancel meetings</span>
                 </li>
                 <li className="row-start-tight">
                   <CheckIcon className="w-5 h-5 text-ink-primary flex-shrink-0 mt-0.5" />
@@ -125,17 +119,71 @@ export default function PricingPage() {
                 </li>
                 <li className="row-start-tight">
                   <CheckIcon className="w-5 h-5 text-ink-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-body text-copy-primary">Work across companies, participants and time zones</span>
+                  <span className="text-body text-copy-primary">Coordinate across organizations and time zones</span>
                 </li>
                 <li className="row-start-tight">
                   <CheckIcon className="w-5 h-5 text-ink-primary flex-shrink-0 mt-0.5" />
-                  <span className="text-body text-copy-primary">Control who can access your availability through the Trust Center</span>
+                  <span className="text-body text-copy-primary">
+                    Control who can access your calendar availability through your Trust Center
+                  </span>
                 </li>
               </ul>
 
               <div className="mt-auto pt-10 flow-xs items-center">
                 <LoginButton size="large" className="px-10">
-                  Start your 30-day free trial
+                  Get my Envoy
+                </LoginButton>
+              </div>
+              </div>
+            </div>
+
+            <div className="bg-surface-base rounded-2xl p-8 md:p-10 flex flex-col h-full border border-line-default shadow-sm">
+              <h2 className="section-subheading text-ink-primary mb-6">
+                Unlimited bookings
+              </h2>
+
+              <div className="mb-2">
+                <span className="text-4xl md:text-5xl font-semibold text-emphasis-primary leading-tight">
+                  €29 / month
+                </span>
+              </div>
+
+              <p className="text-body text-copy-muted mb-6">
+                Unlimited bookings. Cancel anytime.
+              </p>
+
+              <p className="text-body text-copy-primary mb-8">
+                Get your own Envoy to coordinate as many meetings as you need for a fixed monthly price.
+              </p>
+
+              <h3 className="text-sm font-semibold text-ink-primary mb-4 uppercase tracking-wide">
+                Included:
+              </h3>
+
+              <ul className="stack-xs">
+                <li className="row-start-tight">
+                  <CheckIcon className="w-5 h-5 text-ink-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-body text-copy-primary">Schedule, reschedule and cancel meetings</span>
+                </li>
+                <li className="row-start-tight">
+                  <CheckIcon className="w-5 h-5 text-ink-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-body text-copy-primary">Coordinate across Google Calendar and Microsoft Outlook</span>
+                </li>
+                <li className="row-start-tight">
+                  <CheckIcon className="w-5 h-5 text-ink-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-body text-copy-primary">Coordinate across organizations and time zones</span>
+                </li>
+                <li className="row-start-tight">
+                  <CheckIcon className="w-5 h-5 text-ink-primary flex-shrink-0 mt-0.5" />
+                  <span className="text-body text-copy-primary">
+                    Control who can access your calendar availability through your Trust Center
+                  </span>
+                </li>
+              </ul>
+
+              <div className="mt-auto pt-10 flow-xs items-center">
+                <LoginButton size="large" className="px-10">
+                  Get my Envoy
                 </LoginButton>
               </div>
             </div>
@@ -153,19 +201,63 @@ export default function PricingPage() {
           <div className="flow-md">
             <Card className="rounded-xl p-6 md:p-8">
               <h3 className="item-heading text-ink-primary mb-3">
-                Is there a free trial?
+                Is there a special offer for{' '}
+                <a
+                  href="https://websummit.com/appearances/lis26/93d5c8e6-1afa-4f7a-afc4-548ec7738710/ask-my-envoy-/"
+                  className="text-action-primary hover:underline"
+                >
+                  Web Summit 2026
+                </a>
+                ?
               </h3>
               <p className="text-body text-copy-primary">
-                Yes. Your first 30 days are completely free. No payment method or billing information is required to start.
+                Yes! To celebrate our participation in{' '}
+                <a
+                  href="https://websummit.com/appearances/lis26/93d5c8e6-1afa-4f7a-afc4-548ec7738710/ask-my-envoy-/"
+                  className="text-action-primary hover:underline"
+                >
+                  Web Summit 2026
+                </a>
+                , we&apos;re offering Pay Per Completion at €0.30 instead of €0.50 per completed booking.
+              </p>
+              <p className="text-body text-copy-primary mt-3">
+                Sign up before December 31, 2026, and keep this discounted rate permanently.
               </p>
             </Card>
 
             <Card className="rounded-xl p-6 md:p-8">
               <h3 className="item-heading text-ink-primary mb-3">
-                What happens at the end of the 30-day trial?
+                Can I try Ask My Envoy for free?
               </h3>
               <p className="text-body text-copy-primary">
-                To keep using your Envoy, you&apos;ll need to add a payment method before the trial ends. If you don&apos;t, your subscription will automatically be cancelled and you won&apos;t be charged.
+                Yes. Your first 5 completed bookings are free. No credit card or billing information is required to get started.
+              </p>
+            </Card>
+
+            <Card className="rounded-xl p-6 md:p-8">
+              <h3 className="item-heading text-ink-primary mb-3">
+                What happens after my 5 free bookings?
+              </h3>
+              <p className="text-body text-copy-primary">
+                After your first 5 free bookings, you can continue with Pay Per Completion or choose a monthly subscription. With Pay Per Completion, simply add credit to your account, starting at €5. Each completed booking is deducted from your balance. You can top up your credit whenever you need.
+              </p>
+            </Card>
+
+            <Card className="rounded-xl p-6 md:p-8">
+              <h3 className="item-heading text-ink-primary mb-3">
+                How does Pay Per Completion work?
+              </h3>
+              <p className="text-body text-copy-primary">
+                With Pay Per Completion, you pay €0.50 each time your Envoy successfully completes a booking. No subscription required, and no charge for unsuccessful attempts.
+              </p>
+            </Card>
+
+            <Card className="rounded-xl p-6 md:p-8">
+              <h3 className="item-heading text-ink-primary mb-3">
+                What&apos;s the difference between Pay Per Completion and a subscription?
+              </h3>
+              <p className="text-body text-copy-primary">
+                Pay Per Completion charges you for each completed booking, while a subscription gives you unlimited bookings for €29/month.
               </p>
             </Card>
 
@@ -174,7 +266,7 @@ export default function PricingPage() {
                 Can I cancel anytime?
               </h3>
               <p className="text-body text-copy-primary">
-                Yes. There is no long-term commitment. If you cancel, your subscription remains active until the end of your current billing period, and you won&apos;t be charged again after that.
+                Yes. There is no long-term commitment. If you cancel your subscription, it remains active until the end of your current billing period. With Pay Per Completion, there is no subscription to cancel.
               </p>
             </Card>
 
@@ -219,7 +311,7 @@ export default function PricingPage() {
                 Can I get more than one Envoy?
               </h3>
               <p className="text-body text-copy-primary">
-                Yes. You can subscribe to as many Envoys as you need.
+                Yes. You can have multiple Envoys, each with its own Pay Per Completion or subscription plan.
               </p>
             </Card>
 
@@ -228,7 +320,7 @@ export default function PricingPage() {
                 Can I add more Envoys?
               </h3>
               <p className="text-body text-copy-primary">
-                Yes. Your subscription is based on the number of Envoys you use. You can start with one and add more later for people you manage or work with.
+                Yes. You can start with one Envoy and add more as your needs grow. Each Envoy can coordinate meetings on behalf of a different person.
               </p>
             </Card>
 

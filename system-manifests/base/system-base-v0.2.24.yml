@@ -6,6 +6,13 @@ components:
 
 notes: |
   Release Notes 0.2.24
+    - Reworked `/pricing` for three offers: free calendar sharing, Pay Per Completion (pay per booking), and unlimited bookings on a monthly subscription
+    - Updated the `/pricing` hero to "Three ways to use Ask My Envoy" with copy aligned to free calendar connection, pay per completion, and subscription
+    - Simplified the three product cards with a shared structure (title, price headline, subtitle, body, Included list); paid cards share the same Envoy feature bullets
+    - Added a Pay Per Completion card with Web Summit promotional pricing (€0.30 per booking), a gold frame, and a "Web Summit promo" ribbon on the featured middle card
+    - Reworked `/pricing` FAQs for the first 5 free bookings, Pay Per Completion (credit, €0.50 standard rate), subscription comparison, cancellation, and multiple Envoys; added a Web Summit 2026 FAQ with a link to the official appearance page
+    - Added shared `grid-three` layout utility for the three-column pricing card row on large screens
+    - Updated the homepage final CTA subtitle to first 5 free bookings (no credit card) and changed the primary button label to "Get my Envoy"
 
   Release Notes 0.2.23
     - Added GitHub in the sameAs field of the Organization Schema.org JSON-LD
