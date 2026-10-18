@@ -249,12 +249,12 @@ export default function Home() {
               Stop coordinating meetings yourself
             </h2>
             <p className="text-lead text-copy-inverse/80 max-w-2xl">
-              Let your Envoy handle the coordination. Try it free for 30 days. No credit card required.
+              Let your Envoy handle the coordination. Your first 5 bookings are free. No credit card required.
             </p>
 
             <div className="cta-row">
               <LoginButton size="large" className="px-10">
-                Start your 30-day free trial
+                Get my Envoy
               </LoginButton>
               <Button href="/how-it-works" variant="light" className="px-10">
                 See how it works
