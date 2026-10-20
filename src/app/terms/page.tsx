@@ -21,7 +21,7 @@ export default function TermsPage() {
             <h1 className="hero-heading text-ink-primary mb-4">
               Terms of Service
             </h1>
-            <p className="text-meta text-copy-muted">Last updated: August 2026</p>
+            <p className="text-meta text-copy-muted">Last updated: October 2026</p>
           </div>
 
           <div className="prose prose-gray max-w-none stack-xl text-body text-copy-primary">
@@ -41,16 +41,27 @@ export default function TermsPage() {
 
             {/* Section 2 */}
             <div>
-              <h2 className="item-heading text-ink-primary mb-3">2. Access and subscriptions</h2>
+              <h2 className="item-heading text-ink-primary mb-3">2. Access and service plans</h2>
               <ul className="stack-xs list-disc list-inside">
-                <li>The Services may still evolve as we improve features, reliability and performance.</li>
-                <li>We may update, modify or discontinue features where necessary.</li>
-                <li>Access to certain features may depend on your subscription and account configuration.</li>
+                <li>The Services may evolve as we improve features, reliability and performance.</li>
+                <li>We may update, modify or discontinue features where necessary, subject to applicable law and contractual commitments.</li>
+                <li>Access to certain features depends on your service plan and account configuration.</li>
               </ul>
               <p className="mt-4">
-                <strong>Paid subscriptions.</strong> Access to paid features is subject to the pricing and billing
-                terms presented when you subscribe. Where a free trial is offered, the applicable trial period and
-                billing terms will be shown before payment details are submitted.
+                <strong>Free participation.</strong> You may connect your calendar and use the Trust Center without purchasing a subscription or prepaid credits. This allows authorized Envoys to coordinate meetings with you according to the permissions you grant.
+              </p>
+              <p className="mt-4">
+                <strong>Pay Per Completion.</strong> You may obtain your own Envoy without a recurring subscription and pay for successfully completed bookings using prepaid credits. Eligible new customers receive their first five completed bookings free of charge.
+              </p>
+              <p className="mt-4">
+                <strong>Paid subscriptions.</strong> Subscription plans provide access to the features and usage allowances specified in the selected plan. Subscription pricing and billing conditions are presented before purchase.
+              </p>
+              <p className="mt-4">
+                The pricing and features applicable to each plan are described on our{' '}
+                <a href="/pricing" className="text-ink-primary underline underline-offset-2">
+                  Pricing
+                </a>{' '}
+                page.
               </p>
             </div>
 
@@ -118,32 +129,108 @@ export default function TermsPage() {
             <div>
               <h2 className="item-heading text-ink-primary mb-3">8. Billing and cancellation</h2>
               <p>
-                Subscriptions are billed in advance at the price and frequency shown when you subscribe. Unless
-                otherwise stated, subscriptions renew automatically until cancelled.
+                <strong>Pay Per Completion.</strong> Under this plan, you are charged for each successfully completed booking at the rate applicable to your account.
               </p>
               <p className="mt-4">
-                You may cancel your subscription at any time. Cancellation takes effect at the end of the current
-                billing period unless otherwise stated.
+                A booking is considered completed when Ask My Envoy successfully creates the corresponding calendar event following your instructions.
               </p>
               <p className="mt-4">
-                If a free trial is offered, you will not be charged until the trial ends. Unless you cancel before
-                the end of the trial, your subscription will automatically become paid at the price shown when you
-                subscribed.
+                Unsuccessful booking attempts are not charged. A subsequent cancellation of a successfully completed booking does not automatically entitle you to a refund of the original booking charge.
+              </p>
+              <p className="mt-4">
+                The first five successfully completed bookings are free for eligible new customers.
+              </p>
+              <p className="mt-4">
+                <strong>Subscriptions.</strong> Subscriptions are billed in advance at the price and frequency shown when you subscribe. Unless otherwise stated, subscriptions renew automatically until cancelled.
+              </p>
+              <p className="mt-4">
+                You may cancel your subscription at any time. Cancellation takes effect at the end of the current billing period unless otherwise stated.
+              </p>
+              <p className="mt-4">
+                Cancelling a subscription does not automatically terminate your Ask My Envoy account or access to free participation features.
+              </p>
+              <p className="mt-4">
+                <strong>Pricing and promotional offers.</strong> The applicable rates are disclosed before purchase and are available on our{' '}
+                <a href="/pricing" className="text-ink-primary underline underline-offset-2">
+                  Pricing
+                </a>{' '}
+                page.
+              </p>
+              <p className="mt-4">
+                Customers eligible for the Web Summit 2026 promotional offer who register before December 31, 2026, retain the promotional Pay Per Completion rate for future eligible bookings without a fixed expiration date.
+              </p>
+              <p className="mt-4">
+                Changes to standard pricing do not affect permanent promotional rates previously granted to eligible customers.
               </p>
             </div>
 
             {/* Section 9 */}
             <div>
-              <h2 className="item-heading text-ink-primary mb-3">9. Governing law</h2>
+              <h2 className="item-heading text-ink-primary mb-3">9. Prepaid credits</h2>
+              <p>
+                Pay Per Completion operates through prepaid credits purchased in advance.
+              </p>
+              <p className="mt-4">
+                An initial purchase of at least €5 is required to continue using paid coordination services after the free booking allowance has been exhausted. All subsequent credit purchases are also subject to a minimum of €5.
+              </p>
+              <p className="mt-4">
+                Each successfully completed booking deducts the applicable charge from your available credit balance.
+              </p>
+              <p className="mt-4">
+                Purchased credits are valid for 12 months from their purchase date. Each additional credit purchase has its own validity period. Credits are consumed in order of purchase, starting with the oldest available credits.
+              </p>
+              <p className="mt-4">
+                Unused credits expire at the end of their validity period and cannot be used for subsequent bookings.
+              </p>
+              <p className="mt-4">
+                When your available balance is insufficient to cover a booking, paid coordination services are suspended until additional credits are purchased.
+              </p>
+              <p className="mt-4">
+                Prepaid credits are non-refundable, except where required by applicable law. Closing your account does not entitle you to a refund of unused credits beyond any mandatory statutory rights.
+              </p>
+              <p className="mt-4">
+                Credits are intended exclusively for purchasing Ask My Envoy services. They cannot be transferred to another account or redeemed for cash, except where required by applicable law.
+              </p>
+              <p className="mt-4">
+                Credit expiration does not affect any permanent promotional booking rate associated with your account.
+              </p>
+            </div>
+
+            {/* Section 10 */}
+            <div>
+              <h2 className="item-heading text-ink-primary mb-3">10. Consumer withdrawal rights</h2>
+              <p>
+                If you are a consumer, you may benefit from a statutory right of withdrawal within 14 days of entering into a distance contract, in accordance with applicable French and European Union law.
+              </p>
+              <p className="mt-4">
+                If you expressly request that paid services begin during the withdrawal period, you may be required to pay for services already performed before exercising your withdrawal right, as permitted by applicable law.
+              </p>
+              <p className="mt-4">
+                Where a service has been fully performed following your express request and acknowledgment of the resulting loss of withdrawal rights, that service may no longer qualify for withdrawal.
+              </p>
+              <p className="mt-4">
+                Unused prepaid credits will be refunded where required by applicable law, including following the valid exercise of a statutory withdrawal right.
+              </p>
+              <p className="mt-4">
+                Refunds required by law will be processed in accordance with applicable statutory deadlines and payment requirements.
+              </p>
+              <p className="mt-4">
+                Nothing in these Terms limits any mandatory consumer protection rights.
+              </p>
+            </div>
+
+            {/* Section 11 */}
+            <div>
+              <h2 className="item-heading text-ink-primary mb-3">11. Governing law</h2>
               <p>
                 These Terms are governed by French law, without prejudice to any mandatory consumer protection
                 rights that may apply under the laws of your country of residence.
               </p>
             </div>
 
-            {/* Section 10 */}
+            {/* Section 12 */}
             <div>
-              <h2 className="item-heading text-ink-primary mb-3">10. Contact</h2>
+              <h2 className="item-heading text-ink-primary mb-3">12. Contact</h2>
               <p>
                 Questions:{' '}
                 <a href="mailto:legal@askmyenvoy.com" className="text-ink-primary underline underline-offset-2">

@@ -27,7 +27,7 @@ const staticPages: Array<{ path: string; lastModified: string }> = [
   { path: '/about', lastModified: '2026-09-03' },
   { path: '/milestones', lastModified: '2026-09-03' },
   { path: '/privacy', lastModified: '2026-08-30' },
-  { path: '/terms', lastModified: '2026-08-30' },
+  { path: '/terms', lastModified: '2026-10-19' },
 ];
 
 const pages = [...staticPages.slice(0, 7), ...referenceArticlePages, ...staticPages.slice(7)];
