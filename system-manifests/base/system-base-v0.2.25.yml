@@ -6,6 +6,7 @@ components:
 
 notes: |
   Release Notes 0.2.25
+    - Added a new section to the Terms of Service page explaining the free participation, Pay Per Completion, and paid subscriptions options
 
   Release Notes 0.2.24
     - Reworked `/pricing` for three offers: free calendar sharing, Pay Per Completion (pay per booking), and unlimited bookings on a monthly subscription
